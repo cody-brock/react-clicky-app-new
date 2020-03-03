@@ -1,0 +1,81 @@
+[
+  {
+    "id": 1,
+    "name": "Spider Monkey",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/spider_monkey.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Squirrel Monkey",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/squirrel_monkey_species.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Vervet Monkey",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/vervet_specie.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Mandrill",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/Mandrill.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Proboscis Monkey",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/Proboscis_monkey.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Pygmy Marmoset",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/pygmy.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Rhesus Macaque",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/Rhesus-1.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Common Marmoset",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/common_marmoset.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Gibbon",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/gibbon_information.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Golden Lion Tamarin",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/Tamarin.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Howler Monkey",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/howler_monkey.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Japanese Macaque",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/japanese_macaque.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Baboon",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/baboon_species.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Blue Monkey",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/blue_monkey_species.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Capuchin Monkey",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/capuchin-1.jpg"
+  }
+]
+
+
+
+
