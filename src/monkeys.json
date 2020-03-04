@@ -1,78 +1,93 @@
 [
   {
-    "id": 1,
+    "id": 0,
     "name": "Spider Monkey",
-    "image": "https://www.monkeyworlds.com/wp-content/uploads/spider_monkey.jpg"
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/spider_monkey.jpg",
+    "alreadyClicked": false
+  },
+  {
+    "id": 1,
+    "name": "Squirrel Monkey",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/squirrel_monkey_species.jpg",
+    "alreadyClicked": false
   },
   {
     "id": 2,
-    "name": "Squirrel Monkey",
-    "image": "https://www.monkeyworlds.com/wp-content/uploads/squirrel_monkey_species.jpg"
+    "name": "Vervet Monkey",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/vervet_specie.jpg",
+    "alreadyClicked": false
   },
   {
     "id": 3,
-    "name": "Vervet Monkey",
-    "image": "https://www.monkeyworlds.com/wp-content/uploads/vervet_specie.jpg"
+    "name": "Mandrill",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/Mandrill.jpg",
+    "alreadyClicked": false
   },
   {
     "id": 4,
-    "name": "Mandrill",
-    "image": "https://www.monkeyworlds.com/wp-content/uploads/Mandrill.jpg"
+    "name": "Proboscis Monkey",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/Proboscis_monkey.jpg",
+    "alreadyClicked": false
   },
   {
     "id": 5,
-    "name": "Proboscis Monkey",
-    "image": "https://www.monkeyworlds.com/wp-content/uploads/Proboscis_monkey.jpg"
+    "name": "Pygmy Marmoset",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/pygmy.jpg",
+    "alreadyClicked": false
   },
   {
     "id": 6,
-    "name": "Pygmy Marmoset",
-    "image": "https://www.monkeyworlds.com/wp-content/uploads/pygmy.jpg"
+    "name": "Rhesus Macaque",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/Rhesus-1.jpg",
+    "alreadyClicked": false
   },
   {
     "id": 7,
-    "name": "Rhesus Macaque",
-    "image": "https://www.monkeyworlds.com/wp-content/uploads/Rhesus-1.jpg"
+    "name": "Common Marmoset",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/common_marmoset.jpg",
+    "alreadyClicked": false
   },
   {
     "id": 8,
-    "name": "Common Marmoset",
-    "image": "https://www.monkeyworlds.com/wp-content/uploads/common_marmoset.jpg"
+    "name": "Gibbon",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/gibbon_information.jpg",
+    "alreadyClicked": false
   },
   {
     "id": 9,
-    "name": "Gibbon",
-    "image": "https://www.monkeyworlds.com/wp-content/uploads/gibbon_information.jpg"
+    "name": "Golden Lion Tamarin",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/Tamarin.jpg",
+    "alreadyClicked": false
   },
   {
     "id": 10,
-    "name": "Golden Lion Tamarin",
-    "image": "https://www.monkeyworlds.com/wp-content/uploads/Tamarin.jpg"
+    "name": "Howler Monkey",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/howler_monkey.jpg",
+    "alreadyClicked": false
   },
   {
     "id": 11,
-    "name": "Howler Monkey",
-    "image": "https://www.monkeyworlds.com/wp-content/uploads/howler_monkey.jpg"
+    "name": "Japanese Macaque",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/japanese_macaque.jpg",
+    "alreadyClicked": false
   },
   {
     "id": 12,
-    "name": "Japanese Macaque",
-    "image": "https://www.monkeyworlds.com/wp-content/uploads/japanese_macaque.jpg"
+    "name": "Baboon",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/baboon_species.jpg",
+    "alreadyClicked": false
   },
   {
     "id": 13,
-    "name": "Baboon",
-    "image": "https://www.monkeyworlds.com/wp-content/uploads/baboon_species.jpg"
+    "name": "Blue Monkey",
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/blue_monkey_species.jpg",
+    "alreadyClicked": false
   },
   {
     "id": 14,
-    "name": "Blue Monkey",
-    "image": "https://www.monkeyworlds.com/wp-content/uploads/blue_monkey_species.jpg"
-  },
-  {
-    "id": 15,
     "name": "Capuchin Monkey",
-    "image": "https://www.monkeyworlds.com/wp-content/uploads/capuchin-1.jpg"
+    "image": "https://www.monkeyworlds.com/wp-content/uploads/capuchin-1.jpg",
+    "alreadyClicked": false
   }
 ]
 
