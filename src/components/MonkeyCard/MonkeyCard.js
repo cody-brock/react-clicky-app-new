@@ -6,7 +6,7 @@ const MonkeyCard = (props) => {
   return (
     <div className="flex-row">
       <div className="card monkey-card">
-        <img src={props.monkeyImage} className="card-img-top" alt="..." />
+        <img src={props.monkeyImage} className="card-img-top" alt="..." onClick={props.clickMonkey}/>
         <div className="card-body">
           <p className="card-text">{props.monkeyName}</p>
         </div>
