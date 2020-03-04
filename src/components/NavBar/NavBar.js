@@ -1,5 +1,7 @@
 import React from 'react'
+import "./navBar.css"
 
+//need to style page
 
 const NavBar = (props) => {
   return (
