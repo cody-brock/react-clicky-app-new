@@ -1,27 +1,41 @@
 import React, { useState } from "react";
 
+// Imports components
 import NavBar from "./NavBar/NavBar"
 import Jumbotron from "./Jumbotron/Jumbotron";
 import MonkeyCard from "./MonkeyCard/MonkeyCard";
 import Wrapper from "./Wrapper/Wrapper"
 
+// Imports JSON file
 import initialMonkeys from "../monkeys.json"
 
+//Main Logic
 const MonkeyContainer = () => {
 
   const [monkeys, setMonkeys] = useState(initialMonkeys)
+  const [score, setScore] = useState(0)
+  const [topScore, setTopScore] = useState(0)
+  
+  const monkeyArrLength = monkeys.length;
 
   const randomIntFromInterval = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  const monkeyArrLength = monkeys.length;
+  const increaseScore = () => {
+    let newScore = score + 1
+    setScore(newScore)
+    if (newScore > topScore) {
+      setTopScore(newScore);
+    }
+  }
+
+  const resetScore = () => {
+    setScore(0);
+  }
 
   const randomizeMonkeyCards = () => {
-    //
-    console.log('monkeys', monkeys)
     let newMonkeys = monkeys;
-    console.log("newMonkeys", newMonkeys)
     let returnMonkeys = [];
     while (returnMonkeys.length < monkeyArrLength) {
       let monkeyIndex = randomIntFromInterval(0, newMonkeys.length-1);
@@ -29,9 +43,7 @@ const MonkeyContainer = () => {
       returnMonkeys.push(monkeyPush);
       newMonkeys.splice(monkeyIndex, 1);
     }
-    console.log("returnMonkeys", returnMonkeys);
     setMonkeys(returnMonkeys);
-    console.log('after setMonkeys monkeys', monkeys)
   }
 
   // Method to handle when user clicks on Monkey images
@@ -43,6 +55,7 @@ const MonkeyContainer = () => {
     // If monkey has already been clicked...
     if (clickedMonkey[0].alreadyClicked === true) {
       // Losing condition
+      resetScore()
       alert("Already Clicked!");
     } else {
       // Winning condition
@@ -50,7 +63,7 @@ const MonkeyContainer = () => {
       // Sets property so we know this monkey has been clicked
       clickedMonkey[0].alreadyClicked = true;
       // Updates NavBar
-      NavBar(1, 69)
+      increaseScore();
       // Triggers method to randomize then rerender cards
       randomizeMonkeyCards()
     }
@@ -59,8 +72,8 @@ const MonkeyContainer = () => {
   return(
     <div>
       <NavBar 
-        score={2}
-        topScore={5}
+        score={score}
+        topScore={topScore}
         // handleScore={() => handleScore()}
       />
       <Jumbotron />
