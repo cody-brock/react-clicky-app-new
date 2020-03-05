@@ -5,6 +5,8 @@ import NavBar from "./NavBar/NavBar"
 import Jumbotron from "./Jumbotron/Jumbotron";
 import MonkeyCard from "./MonkeyCard/MonkeyCard";
 import Wrapper from "./Wrapper/Wrapper"
+import Swal from 'sweetalert2'
+
 
 // Imports JSON file
 import initialMonkeys from "../monkeys.json"
@@ -54,27 +56,37 @@ const MonkeyContainer = () => {
     setMonkeys(returnMonkeys);
   }
 
+  const winningCondition = (clickedMonkey) => {
+    // Sets property so we know this monkey has been clicked
+    clickedMonkey.alreadyClicked = true;
+    // Updates NavBar
+    increaseScore();
+    // Triggers method to randomize then rerender cards
+    randomizeMonkeyCards()
+  }
+
+  const losingCondition = () => {
+    resetScore();
+    resetMonkeyAlreadyClicked();
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops!',
+      text: 'You already chose that card',
+      // footer: '<a href>Why do I have this issue?</a>'
+    })
+  }
+
   // Method to handle when user clicks on Monkey images
   const handleMonkeyClick = clickedId => {
     // Finds the correct object in our monkey array
     const clickedMonkey = monkeys.filter(monkey => monkey.id===clickedId);
-    console.log("correctMonkey[0]", clickedMonkey[0]);
-
     // If monkey has already been clicked...
     if (clickedMonkey[0].alreadyClicked === true) {
-      // Losing condition
-      resetScore();
-      resetMonkeyAlreadyClicked();
-      alert("Already Clicked!");
+      // Triggers losingCondition method
+      losingCondition();
     } else {
-      // Winning condition
-      console.log("hooray");
-      // Sets property so we know this monkey has been clicked
-      clickedMonkey[0].alreadyClicked = true;
-      // Updates NavBar
-      increaseScore();
-      // Triggers method to randomize then rerender cards
-      randomizeMonkeyCards()
+      // Triggers winningCondition method
+      winningCondition(clickedMonkey[0])
     }
   }
 

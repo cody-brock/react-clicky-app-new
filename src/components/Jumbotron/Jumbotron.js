@@ -6,7 +6,7 @@ import "./jungle_background_image.jpg"
 
 const Jumbotron = () => {
   return (
-    <div className="header">
+    <div className="header" >
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
           <h1 className="display-4">Monkeying Around</h1>
