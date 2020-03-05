@@ -34,6 +34,14 @@ const MonkeyContainer = () => {
     setScore(0);
   }
 
+  const resetMonkeyAlreadyClicked = () => {
+    for (let i = 0; i < monkeys.length; i++) {
+      monkeys[i].alreadyClicked = false;
+    }
+    console.log(monkeys);
+    setMonkeys(monkeys);
+  }
+
   const randomizeMonkeyCards = () => {
     let newMonkeys = monkeys;
     let returnMonkeys = [];
@@ -55,7 +63,8 @@ const MonkeyContainer = () => {
     // If monkey has already been clicked...
     if (clickedMonkey[0].alreadyClicked === true) {
       // Losing condition
-      resetScore()
+      resetScore();
+      resetMonkeyAlreadyClicked();
       alert("Already Clicked!");
     } else {
       // Winning condition

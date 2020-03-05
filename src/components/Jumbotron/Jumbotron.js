@@ -1,10 +1,12 @@
 import React from 'react'
+import "./jumbotron.css"
+import "./jungle_background_image.jpg"
 
 //need to style
 
 const Jumbotron = () => {
   return (
-    <div>
+    <div className="header">
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
           <h1 className="display-4">Monkeying Around</h1>

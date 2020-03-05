@@ -5,11 +5,15 @@ import "./navBar.css"
 
 const NavBar = (props) => {
   return (
-    <ul>
-      <li>Monkey Game</li>
-      <li>Click an image to begin!</li>
-      <li>Score: {props.score} | Top Score: {props.topScore}</li>
-    </ul>
+    <div>
+      <nav className="navbar">
+        <ul>
+          <li className="brand">Monkeying Around</li>
+          <li>Click an image to begin!</li>
+          <li className="score">Score: {props.score} | Top Score: {props.topScore}</li>
+        </ul>
+      </nav>
+    </div>
   )
 }
 
