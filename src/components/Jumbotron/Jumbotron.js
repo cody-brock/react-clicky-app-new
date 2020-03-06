@@ -2,8 +2,6 @@ import React from 'react'
 import "./jumbotron.css"
 import "./jungle_background_image.jpg"
 
-//need to style
-
 const Jumbotron = () => {
   return (
     <div className="header" >

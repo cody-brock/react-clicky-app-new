@@ -11,39 +11,53 @@ import Swal from 'sweetalert2'
 // Imports JSON file
 import initialMonkeys from "../monkeys.json"
 
-//Main Logic
+// Main Logic
 const MonkeyContainer = () => {
 
+  // States
   const [monkeys, setMonkeys] = useState(initialMonkeys)
   const [score, setScore] = useState(0)
   const [topScore, setTopScore] = useState(0)
   
+  // Stores the length of the monkeys JSON object
   const monkeyArrLength = monkeys.length;
 
+  // Returns random number, for shuffling the monkey cards
   const randomIntFromInterval = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
+  // Handles logic for increasing score
   const increaseScore = () => {
     let newScore = score + 1
     setScore(newScore)
+    // Sets new top score, if current score is greater than the top score
     if (newScore > topScore) {
       setTopScore(newScore);
     }
+    // Listens for winning condition, which would be  
+      // all cards clicked successfully, then restarts game
+    if (newScore === monkeyArrLength) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Congratulations!',
+        text: 'You successfully chose all the monkeys correct. You are the real MVP.',
+      })
+      setScore(0);
+      resetMonkeyAlreadyClicked();
+    }
   }
 
-  const resetScore = () => {
-    setScore(0);
-  }
-
+  // Sets all the monkey objects to "unclicked," in order to restart game
   const resetMonkeyAlreadyClicked = () => {
     for (let i = 0; i < monkeys.length; i++) {
       monkeys[i].alreadyClicked = false;
     }
-    console.log(monkeys);
     setMonkeys(monkeys);
   }
 
+  // Shuffles the monkey cards, then rerenders them
+  // Note to self:  Could rewrite this - use state to keep an array with id's of monkeys clicked
   const randomizeMonkeyCards = () => {
     let newMonkeys = monkeys;
     let returnMonkeys = [];
@@ -56,23 +70,27 @@ const MonkeyContainer = () => {
     setMonkeys(returnMonkeys);
   }
 
+  // Handles the winning condition
   const winningCondition = (clickedMonkey) => {
     // Sets property so we know this monkey has been clicked
     clickedMonkey.alreadyClicked = true;
-    // Updates NavBar
+    // Updates the score in the NavBar
     increaseScore();
     // Triggers method to randomize then rerender cards
     randomizeMonkeyCards()
   }
 
+  // Handles the losing condition
   const losingCondition = () => {
-    resetScore();
+    // Sets score to 0
+    setScore(0)
+    // Sets all the monkey objects to "unclicked," in order to restart game
     resetMonkeyAlreadyClicked();
+    // Triggers an alert notifying user they have lost
     Swal.fire({
       icon: 'error',
       title: 'Oops!',
       text: 'You already chose that card',
-      // footer: '<a href>Why do I have this issue?</a>'
     })
   }
 
@@ -95,8 +113,8 @@ const MonkeyContainer = () => {
       <NavBar 
         score={score}
         topScore={topScore}
-        // handleScore={() => handleScore()}
       />
+      
       <Jumbotron />
       
       <Wrapper>
